@@ -5,22 +5,27 @@ let timer = document.querySelector(".timer");
 let currantDate = new Date();
 
 let currantTime = () => {
-  let currantDate = new Date();
+    let currantDate = new Date();
 
-  let time = {
-    seconds: currantDate.getSeconds(),
-    minutes: currantDate.getMinutes(),
-    hours:
-      currantDate.getHours() > 12
-        ? Math.ceil(currantDate.getHours() % 12)
-        : currantDate.getHours(),
-  };
+    let time = {
+        seconds: currantDate.getSeconds(),
+        minutes: currantDate.getMinutes(),
+        hours:
+            currantDate.getHours() > 12
+                ? Math.ceil(currantDate.getHours() % 12)
+                : currantDate.getHours(),
+        zone: currantDate.getHours() > 12 ? "PM" : "AM"
+    };
 
-  timer.innerHTML = `${time.hours}:${time.minutes}:${time.seconds}`;
+    if (time.hours == 0) {
+        time.hours = 12;
+    }
 
-  setTimeout(() => {
-    currantTime();
-  }, 1000);
+    timer.innerHTML = `${time.hours}:${time.minutes}:${time.seconds} ${time.zone}`;
+
+    setTimeout(() => {
+        currantTime();
+    }, 1000);
 };
 
 currantTime();

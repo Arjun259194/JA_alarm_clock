@@ -30,6 +30,7 @@ body {
     background-image: url(img/wintertime-2896597_1920.jpg);
     background-position: center;
     width: 100%;
+    filter: grayscale(100%);
 }
 
 .clock_title {
@@ -40,19 +41,58 @@ body {
     padding: 1rem;
     font-size: 10rem;
     font-weight: bolder;
-    color: #12171b;
-    filter: grayscale(100%);
+    -webkit-text-stroke: #12171b 1px;
 }
 
 .setAlarm {
+    color: #12171b;
+    background-color: blueviolet;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 5rem);
+    grid-template-columns: repeat(4, 10rem);
     justify-content: center;
     grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
 }
 
-.setAlarm > h1 {
-    grid-column: span 3;
+.setAlarm h1 {
+    grid-column: span 4;
     text-align: center;
+    font-size: 5rem;
+    color: blueviolet;
+    -webkit-text-stroke: #12171b 1px;
+    font-weight: bolder;
+    margin-top: .5rem;
+}
+
+.setBtn{
+    grid-column: span 4;
+    padding: .2em;
+    font-size: 2em;
+    color: blueviolet;
+    border-style: none;
+    border-radius: .5rem;
+    background-color: #12171b;
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.alarmSet{
+    padding: 1rem;
+    color: blueviolet;
+    font-size: 2rem;
+    font-weight: bold;
+    border-style: none;
+    background-color: #12171b;
+    border-radius: 1rem;
+}
+
+.zoneSelect{
+    padding: 1rem;
+    color: blueviolet;
+    font-size: 2rem;
+    font-weight: bold;
+    border-style: none;
+    background-color: #12171b;
+    border-radius: 1rem;
 }
