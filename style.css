@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Mono', monospace;
+    color: white;
+}
+
+body{
+    background-color: #12171b;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_title{
+    font-size: 2rem;
+}
+
+.timer{
+    padding: 1rem;
+    font-size: 5rem;
+}
+
+.refreshBtn{
+    padding: .5rem 1rem;
+    background-color: #252525;
+    border-style: none;
+    border-radius: .2rem;
+    cursor: pointer;
+}
