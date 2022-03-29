@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: white;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
 }
 
-:root{
-    --color-1:#2ccde2;
+:root {
+    --color-1: #2ccde2;
 }
 
 body {
@@ -65,7 +65,36 @@ body {
 }
 
 .custom-shape-divider-top-1648359492 .shape-fill {
-    fill: #12171B;
+    fill: #12171b;
+}
+
+.wakeUp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    background-color: #dc143c;
+    width: 100%;
+    position: relative;
+
+}
+
+.cancelAlarm {
+    background-color: rgb(141, 17, 42);
+    border-style: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    margin: 0.5rem;
+    margin-inline: auto;
+}
+
+#wakeUpTitle {
+    font-size: 8rem;
+    font-weight: 900;
 }
 
 .setAlarm {
@@ -89,22 +118,22 @@ body {
     color: #12171b;
     /* -webkit-text-stroke: #12171b 1px; */
     font-weight: bolder;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
 }
 
-.setBtn{
+.setBtn {
     grid-column: span 4;
-    padding: .2em;
+    padding: 0.2em;
     font-size: 2em;
     color: blueviolet;
     border-style: none;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     background-color: #12171b;
-    margin: .5rem;
+    margin: 0.5rem;
     cursor: pointer;
 }
 
-.alarmSet{
+.alarmSet {
     padding: 1rem;
     color: blueviolet;
     font-size: 2rem;
@@ -114,7 +143,7 @@ body {
     border-radius: 1rem;
 }
 
-.zoneSelect{
+.zoneSelect {
     padding: 1rem;
     color: blueviolet;
     font-size: 2rem;
@@ -124,57 +153,57 @@ body {
     border-radius: 1rem;
 }
 
-.cardList{
+.cardList {
     padding: 1rem;
     background-color: #2ccde2;
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     position: relative;
     padding-top: 12rem;
 }
 
-.cardListTitle{
+.cardListTitle {
     grid-column: span 4;
     text-align: center;
     font-size: 4rem;
     padding: 2rem;
 }
 
-.card{
-    margin: .5rem;
-    padding: .5rem;
+.card {
+    margin: 0.5rem;
+    padding: 0.5rem;
     background-color: #12171b;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     border-radius: 1rem;
-    transition: .5s;
+    transition: 0.5s;
 }
 
-.card:hover{
-    transform: translateY(-.5rem);
+.card:hover {
+    transform: translateY(-0.5rem);
 }
 
-.card > *{
+.card > * {
     margin: 1rem;
 }
 
-.cancelBtn{
+.cancelBtn {
     color: #12171b;
     font-size: 1.5rem;
     aspect-ratio: 1/1;
     height: 2rem;
     width: 2rem;
-    margin: .5rem;
+    margin: 0.5rem;
     /* padding: .5rem; */
     border-style: none;
     border-radius: 50%;
     cursor: pointer;
 }
 
-.cancelBtn:hover{
+.cancelBtn:hover {
     background-color: crimson;
     color: #12171b;
     font-weight: bolder;
@@ -197,5 +226,26 @@ body {
 }
 
 .custom-shape-divider-top-1648359975 .shape-fill {
-    fill: #8A2BE2;
+    fill: #8a2be2;
+}
+
+
+.custom-shape-divider-top-1648539326 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1648539326 svg {
+    position: relative;
+    display: block;
+    width: calc(128% + 1.3px);
+    height: 166px;
+}
+
+.custom-shape-divider-top-1648539326 .shape-fill {
+    fill: #DC143C;
 }

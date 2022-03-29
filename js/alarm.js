@@ -1,20 +1,35 @@
 console.log("connected");
 
+const Alarm = (time) => {
+    setTimeout(() => {
+        if (document.querySelector(".timer").innerHTML == `${time.HH}:${time.MM}:${time.SS} ${time.timeZone}`) {
+            console.log("wake up!!");
+        } else {
+            Alarm(time);
+        }
+    }, 100);
+};
+
 const setAlarm = () => {
     let cardList = document.querySelector(".cardList");
 
-    let HH = document.querySelector('#HH').value;
-    let MM = document.querySelector('#MM').value;
-    let SS = document.querySelector('#SS').value;
-    let timeZone = document.querySelector('#zoneSelect').value;
+    const time = {
+        HH: document.querySelector("#HH").value,
+        MM: document.querySelector("#MM").value,
+        SS: document.querySelector("#SS").value,
+        timeZone: document.querySelector("#zoneSelect").value,
+    };
 
-    html = cardList.innerHTML + `<article class="card">
+    html =
+        cardList.innerHTML +
+        `<article class="card">
                                     <p>Alarm set for</p>
-                                    <h2>${HH}:${MM}:${SS} ${timeZone}</h2>
+                                    <h2>${time.HH}:${time.MM}:${time.SS} ${time.timeZone}</h2>
                                 </article>`;
-    
+
     cardList.innerHTML = html;
+
+    Alarm(time);
 };
 
-
-document.querySelector('#setBtn').addEventListener('click',setAlarm);
+document.querySelector("#setBtn").addEventListener("click", setAlarm);
