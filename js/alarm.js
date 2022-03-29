@@ -3,7 +3,11 @@ console.log("connected");
 const Alarm = (time) => {
     setTimeout(() => {
         if (document.querySelector(".timer").innerHTML == `${time.HH}:${time.MM}:${time.SS} ${time.timeZone}`) {
-            console.log("wake up!!");
+            // console.log("wake up!!");
+            document.querySelector('#wakeUpTitle').innerHTML = `Wake up it's ${time.HH}:${time.MM}:${time.SS} ${time.timeZone} 😲`;
+            setTimeout(() => {
+                document.querySelector('#wakeUpTitle').innerHTML = `😪`;
+            }, 10000);
         } else {
             Alarm(time);
         }
