@@ -250,3 +250,18 @@ body {
 .custom-shape-divider-top-1648539326 .shape-fill {
     fill: #DC143C;
 }
+
+::-webkit-scrollbar{
+    width: 1.25rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #12171b;
+    margin-block: .5rem;
+    
+}
+::-webkit-scrollbar-thumb{
+    background-color: #8a2be2;
+    border: .25rem #12171b solid;
+    border-radius: 100vw;
+}
